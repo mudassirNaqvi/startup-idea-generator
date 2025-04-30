@@ -14,7 +14,7 @@ multi = '''🔍 ***Describe a problem or theme***
 📈 ***Explore your idea’s potential in minutes***'''
 
 st.markdown(multi, unsafe_allow_html=True)
-st.page_link("pages/page_1.py", label=":blue[_Get Started_],",icon="➡️")
+st.page_link("pages/page_1.py", label=":blue[_Get Started_]",icon="➡️")
 
 placeholder_footer = st.empty()
 
