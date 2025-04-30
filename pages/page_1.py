@@ -1,5 +1,6 @@
 import streamlit as st
-from google import genai
+import google.generativeai as genai
+
 
 st.set_page_config(page_title="Idea Generator", layout="wide")
 st.title(":bulb: Describe Your Idea or Problem")
