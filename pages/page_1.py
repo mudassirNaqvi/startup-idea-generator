@@ -13,7 +13,7 @@ if st.button("Generate Startup Plan"):
         st.success("Here's your AI-generated startup idea:")
         st.write(f"**Problem:** {user_input}")
 
-        genai.configure(api_key="YOUR_API_KEY")
+        genai.configure(api_key="AIzaSyAe8PzE8U2nNv9rEUq4d0XLGFTnkHeYMHY")
 
         model = genai.GenerativeModel("gemini-1.5-flash")
 
