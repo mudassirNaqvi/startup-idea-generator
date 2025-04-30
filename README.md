@@ -1,6 +1,3 @@
-Thank you for the clarification! Here's the updated `README.md` with the correct file name `firstapp.py`:
-
-```markdown
 # 🚀 Start-Up Idea Generator
 
 Welcome to the **Start-Up Idea Generator**! This AI-powered tool is here to help you turn your ideas into actionable startup plans. Simply describe a problem or theme, and let AI generate a startup idea with a detailed plan, including a solution, revenue model, and target audience. 
