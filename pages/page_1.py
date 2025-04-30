@@ -1,7 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
 
-
 st.set_page_config(page_title="Idea Generator", layout="wide")
 st.title(":bulb: Describe Your Idea or Problem")
 
@@ -14,19 +13,19 @@ if st.button("Generate Startup Plan"):
         st.success("Here's your AI-generated startup idea:")
         st.write(f"**Problem:** {user_input}")
 
-        
-        client = genai.Client(api_key="AIzaSyAe8PzE8U2nNv9rEUq4d0XLGFTnkHeYMHY")
+        genai.configure(api_key="YOUR_API_KEY")
 
-        response = client.models.generate_content(
-        model="gemini-1.5-flash",
-        contents=f"""
-        You are an AI model strictly limited to generating startup ideas only.
-        If the user asks anything outside startup ideas, respond with:
-        'Sorry, I can only help you come up with startup ideas.'
+        model = genai.GenerativeModel("gemini-1.5-flash")
 
-        Now respond to the following prompt accordingly:
-        {user_input}
-        """
+        response = model.generate_content(
+            f"""
+            You are an AI model strictly limited to generating startup ideas only.
+            If the user asks anything outside startup ideas, respond with:
+            'Sorry, I can only help you come up with startup ideas.'
+
+            Now respond to the following prompt accordingly:
+            {user_input}
+            """
         )
 
         st.markdown(f"**Solution:** {response.text}")
@@ -34,7 +33,6 @@ if st.button("Generate Startup Plan"):
         st.markdown("**Target Audience:** Startups, students, professionals, and innovators.")
 
 placeholder_footer = st.empty()
-
 with placeholder_footer.container():
     st.markdown("---")
     st.markdown(
